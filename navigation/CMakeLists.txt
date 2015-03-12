@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(navigation)
 
 ## Find catkin macros and libraries
-find_package(catkin REQUIRED COMPONENTS roscpp move_base angles amcl gmapping message_runtime)
+find_package(catkin REQUIRED COMPONENTS roscpp move_base angles amcl gmapping)
 
 ###################################
 ## catkin specific configuration ##

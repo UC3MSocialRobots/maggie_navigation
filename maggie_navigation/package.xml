@@ -30,7 +30,6 @@
     <buildtool_depend>catkin</buildtool_depend>
 
     <run_depend>navigation</run_depend>
-    <run_depend>navigation_msgs</run_depend>
 
     <!-- The export tag contains other, unspecified, tags -->
     <export>
