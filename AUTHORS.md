@@ -11,4 +11,4 @@ maggie_navigation was designed and developed by the Social Robots Group at Robot
 
 ### Thanks
 
-[See all Github contributors](https://github.com/UC3MSocialRobots/maggie_devices/contributors)
+[See all Github contributors](https://github.com/UC3MSocialRobots/maggie_navigation/contributors)
