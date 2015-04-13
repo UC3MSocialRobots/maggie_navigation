@@ -2,17 +2,17 @@
     <arg name="robot" />
 
     <!-- Odometry information and movement (base controller) -->
-    <include file="$(find base)/launch/base.launch">
+    <include file="$(find maggie_base)/launch/base.launch">
         <arg name="robot" value="$(arg robot)" />
     </include>
 
     <!-- Sick -->
-    <include file="$(find navigation)/launch/laser/sick.launch">
+    <include file="$(find nav)/launch/laser/sick.launch">
         <arg name="robot" value="$(arg robot)" />
     </include>
 
     <!-- Navigation -->
-    <include file="$(find navigation)/launch/real/navigation.launch">
+    <include file="$(find nav)/launch/real/navigation.launch">
         <arg name="robot" value="$(arg robot)" />
     </include>
 </launch>

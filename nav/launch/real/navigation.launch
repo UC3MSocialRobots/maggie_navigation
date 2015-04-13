@@ -2,18 +2,18 @@
     <arg name="robot" />
 
     <!--- Run AMCL -->
-    <include file="$(find navigation)/launch/amcl.launch">
+    <include file="$(find nav)/launch/amcl.launch">
         <arg name="robot" value="$(arg robot)" />
     </include>
 
     <!-- Planner -->
     <group ns="$(arg robot)">
         <node pkg="move_base" name="move_base" type="move_base" respawn="false" output="screen">
-            <rosparam file="$(find navigation)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
-            <rosparam file="$(find navigation)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
-            <rosparam file="$(find navigation)/config/local_costmap_params.yaml" command="load" />
-            <rosparam file="$(find navigation)/config/global_costmap_params.yaml" command="load" />
-            <rosparam file="$(find navigation)/config/base_local_planner_params.yaml" command="load" />
+            <rosparam file="$(find nav)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+            <rosparam file="$(find nav)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+            <rosparam file="$(find nav)/config/local_costmap_params.yaml" command="load" />
+            <rosparam file="$(find nav)/config/global_costmap_params.yaml" command="load" />
+            <rosparam file="$(find nav)/config/base_local_planner_params.yaml" command="load" />
 
             <rosparam param="recovery_behaviors">
                 [{name: rotate_recovery, type: rotate_recovery/RotateRecovery},
@@ -40,6 +40,6 @@
         </node>
 
         <!-- -->
-        <!-- <node pkg="navigation" name="maiss_stuck_robot_monitor" type="maiss_stuck_robot_monitor" respawn="true"/> -->
+        <!-- <node pkg="nav" name="maiss_stuck_robot_monitor" type="maiss_stuck_robot_monitor" respawn="true"/> -->
     </group>
 </launch>
