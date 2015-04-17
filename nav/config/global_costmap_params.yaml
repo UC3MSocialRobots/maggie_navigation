@@ -22,7 +22,7 @@ global_costmap:
     # static_map: true
     # rolling_window: false
 
-    global_frame: /odom
+    global_frame: /map
     static_map: true
     rolling_window: false
 

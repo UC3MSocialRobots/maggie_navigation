@@ -19,7 +19,7 @@ local_costmap:
 # should initialize itself based on a map served by the map_server. If
 # you aren't using an existing map or map server, set the static_map
 # parameter to false.
-    static_map: true
+    static_map: false
 
 # Setting the "rolling_window" parameter to true means that the
 # costmap will remain centered around the robot as the robot moves
