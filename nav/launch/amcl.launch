@@ -89,7 +89,7 @@
             
             <!-- Specifies the expected noise in odometry's translation estimate from the translational component of the 
                 robot's motion (default: 0.2) -->
-            <param name="odom_alpha3" value="2.0" />
+            <param name="odom_alpha3" value="0.2>
             
             <!-- Specifies the expected noise in odometry's translation estimate from the rotational component of the robot's 
                 motion (default: 0.2) -->
