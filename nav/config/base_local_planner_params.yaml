@@ -18,7 +18,7 @@ TrajectoryPlannerROS:
 ### The first section of parameters above define the velocity limits of the robot.
 
     # The maximum forward velocity allowed for the base in meters/sec (double, default: 0.5)
-    max_vel_x: 0.6
+    max_vel_x: 0.4
 
     # The minimum forward velocity allowed for the base in meters/sec. It is
     # useful to specify this to guarantee that velocity commands sent to a mobile
@@ -26,7 +26,7 @@ TrajectoryPlannerROS:
     min_vel_x: 0.1
 
     # The maximum rotational velocity allowed for the base in radians/sec (double, default: 1.0)
-    max_rotational_vel: 1.0
+    max_rotational_vel: 0.6
 
     # The minimum rotational velocity allowed for the base while performing in-place rotations in radians/sec  (double, default: 0.4)
     min_in_place_rotational_vel: 0.1
