@@ -12,7 +12,7 @@
 # http://www.ros.org/wiki/base_local_planner#Parameters
 
 ### The rate in Hz at which to run the control loop and send velocity commands to the base (default: 20.0)
-controller_frequency: 60
+controller_frequency: 10
 
 TrajectoryPlannerROS:
 ### The first section of parameters above define the velocity limits of the robot.
@@ -29,7 +29,7 @@ TrajectoryPlannerROS:
     max_rotational_vel: 1.0
 
     # The minimum rotational velocity allowed for the base while performing in-place rotations in radians/sec  (double, default: 0.4)
-    min_in_place_rotational_vel: 0.4
+    min_in_place_rotational_vel: 0.1
 
 ### The second section defines the acceleration limits of the robot.
 
