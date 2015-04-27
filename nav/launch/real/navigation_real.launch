@@ -11,6 +11,12 @@
         <arg name="robot" value="$(arg robot)" />
     </include>
 
+    <!-- Hokuyo -->
+    <include file="$(find nav)/launch/laser/hokuyo.launch">
+        <arg name="robot" value="$(arg robot)" />
+    </include>
+
+
     <!-- Navigation -->
     <include file="$(find nav)/launch/real/navigation.launch">
         <arg name="robot" value="$(arg robot)" />
