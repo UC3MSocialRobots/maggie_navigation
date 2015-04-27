@@ -7,4 +7,7 @@
         <param name="max_ang" type="double" value="2.0923"/>
         <param name="min_ang" type="double" value="-2.0862"/>
     </node>
+
+	<!-- publish the required transform /base_link -> /laser -->
+    <node name="laser_tf_broadcaster" pkg="tf" type="static_transform_publisher" args="-0.15 0 0.5   0 0 3.14159   base_link  	laser_atras   100" />
 </launch>
