@@ -4,8 +4,8 @@
         <param name="port" type="string" value="/dev/ttyACM0"/>
         <param name="intensity" type="bool" value="false"/>
         <param name="frame_id" type="string" value="laser_rear"/>
-        <param name="max_ang" type="double" value="3.1415"/>
-        <param name="min_ang" type="double" value="-3.1415"/>
+        <param name="max_ang" type="double" value="2.08"/>
+        <param name="min_ang" type="double" value="-2.08"/>
     </node>
 
 	<!-- publish the required transform /base_link -> /laser_rear -->
