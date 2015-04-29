@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package format="2">
-    <name>nav</name>
+    <name>maggie_navigation_config</name>
     <version>0.0.1</version>
     <description>
-        navigation
+        navigation config files for Social Robot Maggie.
     </description>
 
     <!-- Author tags are optional, mutiple are allowed, one per tag -->
@@ -21,7 +21,7 @@
 
 
     <!-- Url tags are optional, but mutiple are allowed, one per tag -->
-    <url type="website">http://wiki.ros.org/nav</url>
+    <url type="website">http://wiki.ros.org/maggie_navigation_config</url>
     <url type="bugtracker">https://github.com/UC3MSocialRobots/maggie_navigation/issues</url>
     <url type="repository">https://github.com/UC3MSocialRobots/maggie_navigation.git</url>
 
@@ -38,6 +38,7 @@
     <depend>amcl</depend>
     <depend>stage</depend>
     <depend>gmapping</depend>
+
 
     <!-- The export tag contains other, unspecified, tags -->
     <export>

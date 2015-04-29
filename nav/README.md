@@ -1,4 +1,4 @@
-# nav
+# maggie_navigation_config
 
 ROS package for the navigation for the Social Robot Maggie.
 

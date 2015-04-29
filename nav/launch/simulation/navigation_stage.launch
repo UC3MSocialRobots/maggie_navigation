@@ -2,18 +2,18 @@
     <arg name="robot" />
 
     <!--- Run AMCL -->
-    <include file="$(find nav)/launch/amcl.launch">
+    <include file="$(find maggie_navigation_config)/launch/amcl.launch">
         <arg name="robot" value="$(arg robot)" />
     </include>
 
     <!-- Planner -->
     <group ns="$(arg robot)">
         <node pkg="move_base" name="move_base" type="move_base" respawn="false" output="screen">
-            <rosparam file="$(find nav)/config/costmap_common_params_stage.yaml" command="load" ns="global_costmap" />
-            <rosparam file="$(find nav)/config/costmap_common_params_stage.yaml" command="load" ns="local_costmap" />
-            <rosparam file="$(find nav)/config/local_costmap_params.yaml" command="load" />
-            <rosparam file="$(find nav)/config/global_costmap_params.yaml" command="load" />
-            <rosparam file="$(find nav)/config/base_local_planner_params.yaml" command="load" />
+            <rosparam file="$(find maggie_navigation_config)/config/costmap_common_params_stage.yaml" command="load" ns="global_costmap" />
+            <rosparam file="$(find maggie_navigation_config)/config/costmap_common_params_stage.yaml" command="load" ns="local_costmap" />
+            <rosparam file="$(find maggie_navigation_config)/config/local_costmap_params.yaml" command="load" />
+            <rosparam file="$(find maggie_navigation_config)/config/global_costmap_params.yaml" command="load" />
+            <rosparam file="$(find maggie_navigation_config)/config/base_local_planner_params.yaml" command="load" />
     
             <param name="base_global_planner" type="string" value="navfn/NavfnROS" />
             <param name="controller_frequency" type="double" value="20.0" />
@@ -34,6 +34,6 @@
             <remap from="map" to="/map" />
         </node>
     
-        <!-- <node pkg="nav" name="maiss_stuck_robot_monitor" type="maiss_stuck_robot_monitor" respawn="true" /> -->
+        <!-- <node pkg="maggie_navigation_config" name="maiss_stuck_robot_monitor" type="maiss_stuck_robot_monitor" respawn="true" /> -->
     </group>
 </launch>

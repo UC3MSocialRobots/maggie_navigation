@@ -12,17 +12,17 @@
     <param name="use_sim_time" type="bool" value="true" />
 
     <!-- Run the map server -->
-    <node name="map_server" pkg="map_server" type="map_server" args="$(find nav)/config/map_1.3.C12_2014-12.yaml">
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find maggie_navigation_config)/config/map_1.3.C12_2014-12.yaml">
         <param name="frame_id" value="/map" />
     </node>
 
     <!-- Navigation (simulation) -->
-    <include file="$(find nav)/launch/simulation/navigation_stage.launch">
+    <include file="$(find maggie_navigation_config)/launch/simulation/navigation_stage.launch">
         <arg name="robot" value="$(arg robot)" />
     </include>
     
     <group ns="$(arg robot)">
         <!-- RVIZ -->
-        <node name="rviz" pkg="rviz" type="rviz" args="-d $(find nav)/config/map_1.3.C12_simulated.rviz" />
+        <node name="rviz" pkg="rviz" type="rviz" args="-d $(find maggie_navigation_config)/config/map_1.3.C12_simulated.rviz" />
     </group>
 </launch>

@@ -7,18 +7,18 @@
     </include>
 
     <!-- Sick -->
-    <include file="$(find nav)/launch/laser/sick.launch">
+    <include file="$(find maggie_navigation_config)/launch/laser/sick.launch">
         <arg name="robot" value="$(arg robot)" />
     </include>
 
     <!-- Hokuyo -->
-    <include file="$(find nav)/launch/laser/hokuyo.launch">
+    <include file="$(find maggie_navigation_config)/launch/laser/hokuyo.launch">
         <arg name="robot" value="$(arg robot)" />
     </include>
 
 
     <!-- Navigation -->
-    <include file="$(find nav)/launch/real/navigation.launch">
+    <include file="$(find maggie_navigation_config)/launch/real/navigation.launch">
         <arg name="robot" value="$(arg robot)" />
     </include>
 </launch>

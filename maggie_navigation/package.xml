@@ -29,7 +29,8 @@
     <!-- Dependencies can be catkin packages or system dependencies -->
     <buildtool_depend>catkin</buildtool_depend>
 
-    <run_depend>nav</run_depend>
+    <run_depend>maggie_navigation_config</run_depend>
+    <run_depend>maggie_teleop</run_depend>
 
     <!-- The export tag contains other, unspecified, tags -->
     <export>
