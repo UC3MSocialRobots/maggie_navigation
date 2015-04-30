@@ -1,4 +1,4 @@
-# teleop
+# maggie_teleop
 
 ROS package for the teleoperation for the Social Robot Maggie.
 

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
-    <name>teleop</name>
-    <version>0.0.1</version>
+    <name>maggie_teleop</name>
+    <version>0.0.0</version>
     <description>
         teleoperation
     </description>
@@ -9,7 +9,6 @@
     <!-- Author tags are optional, mutiple are allowed, one per tag -->
     <!-- Authors do not have to be maintianers, but could be -->
     <author email="raul.perula@uc3m.es">Raul Perula-Martinez</author>
-    <author email="jocastil@ing.uc3m.es">Jose Carlos Castillo Montoya</author>
 
 
     <!-- One maintainer tag required, multiple allowed, one person per tag -->
@@ -21,7 +20,7 @@
 
 
     <!-- Url tags are optional, but mutiple are allowed, one per tag -->
-    <url type="website">http://wiki.ros.org/teleop</url>
+    <url type="website">http://wiki.ros.org/maggie_teleop</url>
     <url type="bugtracker">https://github.com/UC3MSocialRobots/maggie_navigation/issues</url>
     <url type="repository">https://github.com/UC3MSocialRobots/maggie_navigation.git</url>
 
