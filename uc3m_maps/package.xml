@@ -1,14 +1,15 @@
 <?xml version="1.0"?>
-<package>
-    <name>maggie_navigation</name>
+<package format="2">
+    <name>uc3m_maps</name>
     <version>0.0.0</version>
     <description>
-        maggie_navigation metapackage
+        uc3m_maps.
     </description>
 
     <!-- Author tags are optional, mutiple are allowed, one per tag -->
     <!-- Authors do not have to be maintianers, but could be -->
     <author email="raul.perula@uc3m.es">Raul Perula-Martinez</author>
+    <author email="jocastil@ing.uc3m.es">Jose Carlos Castillo Montoya</author>
 
 
     <!-- One maintainer tag required, multiple allowed, one person per tag -->
@@ -20,7 +21,7 @@
 
 
     <!-- Url tags are optional, but mutiple are allowed, one per tag -->
-    <url type="website">http://wiki.ros.org/maggie_navigation</url>
+    <url type="website">http://wiki.ros.org/uc3m_maps</url>
     <url type="bugtracker">https://github.com/UC3MSocialRobots/maggie_navigation/issues</url>
     <url type="repository">https://github.com/UC3MSocialRobots/maggie_navigation.git</url>
 
@@ -28,14 +29,4 @@
     <!-- The *_depend tags are used to specify dependencies -->
     <!-- Dependencies can be catkin packages or system dependencies -->
     <buildtool_depend>catkin</buildtool_depend>
-
-    <run_depend>maggie_navigation_config</run_depend>
-    <run_depend>maggie_teleop</run_depend>
-    <run_depend>uc3m_maps</run_depend>
-
-    <!-- The export tag contains other, unspecified, tags -->
-    <export>
-        <!-- You can specify that this package is a metapackage here: -->
-        <metapackage/>
-    </export>
 </package>

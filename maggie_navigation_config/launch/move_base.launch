@@ -13,19 +13,19 @@
         
         <!-- move base -->
         <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-            <rosparam file="$(find robots_2dnav)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
-            <rosparam file="$(find robots_2dnav)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
-            <rosparam file="$(find robots_2dnav)/config/local_costmap_params.yaml" command="load" />
-            <rosparam file="$(find robots_2dnav)/config/global_costmap_params.yaml" command="load" />
-            <rosparam file="$(find robots_2dnav)/config/base_local_planner_params.yaml" command="load" />
+            <rosparam file="$(find maggie_navigation_config)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+            <rosparam file="$(find maggie_navigation_config)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+            <rosparam file="$(find maggie_navigation_config)/config/local_costmap_params.yaml" command="load" />
+            <rosparam file="$(find maggie_navigation_config)/config/global_costmap_params.yaml" command="load" />
+            <rosparam file="$(find maggie_navigation_config)/config/base_local_planner_params.yaml" command="load" />
         </node>
         
         <!-- transform base link into TF a pose -->
-        <node pkg="robots_2dnav" type="tf_to_pose.exe" name="tf_to_pose_base_link" args="_frame_id:=/base_link  _out_topic:=base_link_pose"
+        <node pkg="maggie_navigation_config" type="tf_to_pose.exe" name="tf_to_pose_base_link" args="_frame_id:=/base_link  _out_topic:=base_link_pose"
             output="log" />
         
         <!-- the trail marker -->
-        <node pkg="robots_2dnav" type="trail_marker.exe" name="trail_marker_base_link"
+        <node pkg="maggie_navigation_config" type="trail_marker.exe" name="trail_marker_base_link"
             args="_input_pose_topic:=base_link_pose
                     _static_frame_id:=/odom
                     _color_r:=0 _color_g:=0 _color_b:=1 _color_a:=0.9
