@@ -32,6 +32,7 @@
     <!-- ROS packages dependencies -->
     <build_depend>roscpp</build_depend>
     <exec_depend>roscpp</exec_depend>
+    <exec_depend>joy</exec_depend>
 
 
     <!-- The export tag contains other, unspecified, tags -->
