@@ -7,6 +7,8 @@
  *
  * @author      Raul Perula-Martinez <raul.perula@uc3m.es>
  * @date        2015-04
+ * @author      Arnaud Ramey <arnaud.a.ramey@gmail.com>
+ * @date        2012-04
  *
  * @copyright   Copyright (C) 2015 University Carlos III of Madrid.
  *              All rights reserved.

@@ -4,6 +4,8 @@
  *
  * @author      Raul Perula-Martinez <raul.perula@uc3m.es>
  * @date        2015-04
+ * @author      Arnaud Ramey <arnaud.a.ramey@gmail.com>
+ * @date        2012-04
  *
  * @copyright   Copyright (C) 2015 University Carlos III of Madrid.
  *              All rights reserved.
@@ -57,7 +59,7 @@ TeleopJoy::~TeleopJoy()
 
 void TeleopJoy::joy_callback(const sensor_msgs::Joy::ConstPtr& joy)
 {
-    // A super nice drawing for the code of the buttons on the Logitech RumblePad 2:
+    // Drawing for the code of the buttons on the Logitech RumblePad 2:
     //   ---------------
     //  |  [6]     [7]  |
     //  |  [4]     [5]  |
@@ -67,36 +69,44 @@ void TeleopJoy::joy_callback(const sensor_msgs::Joy::ConstPtr& joy)
     //  |   |      (1)  |
     //  / /-----------\ \
     // / /
+
     geometry_msgs::Twist vel;
     vel.linear.x = scale_linear * (joy->axes[axis_analog_linear] + joy->axes[axis_digital_linear]);
     vel.angular.z = scale_angular * (joy->axes[axis_analog_angular] + joy->axes[axis_digital_angular]);
 
-    /* Buttons 0, 1, 2, 3 corrsponds to 1, 2, 3, 4 in the joypad
-
-     Button 0 + joystick = move right arm
-     Button 1 + joystick = move left arm
-     Button 2 + joystick = pan head
-     Button 3 + joystick = tilt head
-     */
+    // Buttons 0, 1, 2, 3 corresponds to 1, 2, 3, 4 in the joypad
+    // Button 0 + joystick = move right arm
+    // Button 1 + joystick = move left arm
+    // Button 2 + joystick = pan head
+    // Button 3 + joystick = tilt head
 
     if (joy->buttons[0]) {
-        ROS_INFO_THROTTLE(1, "Button 0 pushed. Moving right arm. \n Emitting linear: %g, angular: %g", vel.linear.x, vel.angular.z);
+        ROS_INFO_THROTTLE(1, "Button 0 pushed. Moving right arm. \n Emitting linear: %g, angular: %g", vel.linear.x,
+                          vel.angular.z);
+
         _right_arm_vel_pub.publish(vel);
     }
     else if (joy->buttons[1]) {
-        ROS_INFO_THROTTLE(1, "Button 1 pushed. Moving left arm. \n Emitting linear: %g, angular: %g", vel.linear.x, vel.angular.z);
+        ROS_INFO_THROTTLE(1, "Button 1 pushed. Moving left arm. \n Emitting linear: %g, angular: %g", vel.linear.x,
+                          vel.angular.z);
+
         _left_arm_vel_pub.publish(vel);
     }
     else if (joy->buttons[2]) {
-        ROS_INFO_THROTTLE(1, "Button 2 pushed. Panning head. \n Emitting linear: %g, angular: %g", vel.linear.x, vel.angular.z);
+        ROS_INFO_THROTTLE(1, "Button 2 pushed. Panning head. \n Emitting linear: %g, angular: %g", vel.linear.x,
+                          vel.angular.z);
+
         _neck_pan_vel_pub.publish(vel);
     }
     else if (joy->buttons[3]) {
-        ROS_INFO_THROTTLE(1, "Button 3 pushed. Tilting head. \n Emitting linear: %g, angular: %g", vel.linear.x, vel.angular.z);
+        ROS_INFO_THROTTLE(1, "Button 3 pushed. Tilting head. \n Emitting linear: %g, angular: %g", vel.linear.x,
+                          vel.angular.z);
+
         _neck_tilt_vel_pub.publish(vel);
     }
     else {
         ROS_INFO_THROTTLE(1, "Emitting linear: %g, angular: %g", vel.linear.x, vel.angular.z);
+
         _vel_pub.publish(vel);
     }
 }
