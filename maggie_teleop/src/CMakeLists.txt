@@ -7,8 +7,3 @@ add_executable(teleop_joy_main.exe
                teleop_joy_main.cpp)
 target_link_libraries(teleop_joy_main.exe
                       teleop_joy ${catkin_LIBRARIES})
-
-add_executable(teleop_keyboard
-               teleop_keyboard.cpp)
-target_link_libraries(teleop_keyboard
-                      ${catkin_LIBRARIES})
