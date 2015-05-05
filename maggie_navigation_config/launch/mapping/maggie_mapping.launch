@@ -7,14 +7,15 @@
         <!-- Maggie Bringup -->
         <include file="$(find maggie_bringup)/launch/maggie_start_basic.launch"/>
 
-        <!-- Run Maggie base -->
-        <include file="$(find maggie_base)/launch/base.launch"/>
-
         <!-- Run Maggie teleoperation: -->
         <include file="$(find maggie_teleop)/launch/teleop_joy.launch"/>
     </group>
 
-
+    <!-- Run Maggie base -->
+    <include file="$(find maggie_base)/launch/base.launch">
+        <arg name="robot" value="$(arg robot)" />
+    </include>
+    
     <!-- Run laser driver: -->
     <include file="$(find maggie_navigation_config)/launch/laser/sick.launch">
         <arg name="robot" value="$(arg robot)" />
