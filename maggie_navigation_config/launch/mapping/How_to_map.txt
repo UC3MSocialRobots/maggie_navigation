@@ -1,22 +1,7 @@
 Launch files are inside maggie_navigation_config/launch
 
-Run Maggie basic hardware (needed to arm the robot):
-   $ roslaunch maggie_bringup maggie_start_basic.launch
-
-Run Maggie base
-   $ roslaunch maggie_base base.launch
-
-Run Maggie teleoperation:
-   $ roslaunch maggie_teleop teleop_joy.launch
-
-Run laser driver:
-   $ roslaunch maggie_navigation_config sick.launch robot:=maggie
-
-Run move_base
-   $ roslaunch maggie_navigation_config move_base.launch robot:=maggie
-
-Launch mapping:
-   $ roslaunch maggie_navigation_config mapping_default2.launch
+Launch Maggie mapping:
+   $ roslaunch maggie_navigation_config maggie_mapping.launch
 
 Once the map is ready, save it:
    $ rosrun map_server map_saver -f "map_name"
