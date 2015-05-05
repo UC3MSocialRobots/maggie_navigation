@@ -1,6 +1,6 @@
 # How To Map with Maggie
 
-Launch files are inside 'maggie_navigation_config/launch'
+Launch files are inside `maggie_navigation_config/launch`
 
 Launch Maggie mapping:
    
