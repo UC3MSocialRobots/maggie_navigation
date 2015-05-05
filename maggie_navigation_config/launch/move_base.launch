@@ -1,24 +1,46 @@
 <launch>
     <arg name="robot" />
+
     <group ns="$(arg robot)">
-        <!-- Run the map server, change the map server to point to a map you've created -->
-        <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find my_map_package)/my_map.pgm my_map_resolution"/> -->
-        
-        <!-- Throttle the voxel grid that is being published for rviz -->
-        <!-- <node pkg="topic_tools" type="throttle" ns="move_base_node/local_costmap" name="voxel_grid_throttle" args="messages 
-            voxel_grid 3.0 voxel_grid_throttled" /> -->
-        
-        <!--- Run AMCL -->
-        <!-- <include file="$(find amcl)/examples/amcl_diff.launch" /> -->
-        
-        <!-- move base -->
-        <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-            <rosparam file="$(find maggie_navigation_config)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
-            <rosparam file="$(find maggie_navigation_config)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
-            <rosparam file="$(find maggie_navigation_config)/config/local_costmap_params.yaml" command="load" />
-            <rosparam file="$(find maggie_navigation_config)/config/global_costmap_params.yaml" command="load" />
-            <rosparam file="$(find maggie_navigation_config)/config/base_local_planner_params.yaml" command="load" />
+        <!-- Planner -->
+        <node pkg="move_base" name="move_base" type="move_base" respawn="false" output="screen">
+            <rosparam file="$(find maggie_navigation_config)/config/costmap_common_params.yaml"
+                command="load" ns="global_costmap" />
+            <rosparam file="$(find maggie_navigation_config)/config/costmap_common_params.yaml"
+                command="load" ns="local_costmap" />
+            <rosparam file="$(find maggie_navigation_config)/config/local_costmap_params.yaml"
+                command="load" />
+            <rosparam file="$(find maggie_navigation_config)/config/global_costmap_params.yaml"
+                command="load" />
+            <rosparam file="$(find maggie_navigation_config)/config/base_local_planner_params.yaml"
+                command="load" />
+
+            <rosparam param="recovery_behaviors">
+                [{name: rotate_recovery, type: rotate_recovery/RotateRecovery},
+                {name: conservative_reset, type: clear_costmap_recovery/ClearCostmapRecovery},
+                {name: aggressive_reset, type: clear_costmap_recovery/ClearCostmapRecovery}]
+            </rosparam>
+
+            <param name="base_global_planner" type="string" value="navfn/NavfnROS" />
+
+            <!-- The rate in Hz at which to run the global planning loop. If the frequency is set to
+                0.0, the global
+                planner will only run when a new goal is received or the local planner reports that its
+                path is blocked
+                (default: 0.0) -->
+            <param name="planner_frequency" type="double" value="0.1" />
+
+            <!-- How long the planner will wait in seconds in an attempt to find a valid plan before
+                space-clearing
+                operations are performed (default: 15.0) -->
+            <param name="planner_patience" type="double" value="5.0" />
+
+            <!-- How long the controller will wait in seconds without receiving a valid control before
+                space-clearing
+                operations are performed (default: 3.0) -->
+            <param name="controller_patience" type="double" value="1.0" />
+
+            <remap from="map" to="/map" />
         </node>
-        
     </group>
 </launch>
