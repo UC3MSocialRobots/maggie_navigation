@@ -3,17 +3,13 @@
 Launch files are inside `maggie_navigation_config/launch`
 
 Launch Maggie mapping:
-   
+
 ```shell
-$ roslaunch maggie_navigation_config maggie_mapping.launch
+$ roslaunch maggie_navigation_config maggie_mapping.launch robot:=robot_name
 ```
 
 Once the map is ready, save it:
-   
+
 ```shell
-$ rosrun map_server map_saver -f "map_name"
+$ rosrun map_server map_saver -f "map_name" __ns:=/robot_name
 ```
-
-
-
-
