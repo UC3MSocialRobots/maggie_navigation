@@ -1,6 +1,6 @@
-# maggie_navigation_config
+# maggie_create_map
 
-ROS package for the navigation for the Social Robot Maggie.
+ROS package for creating a map with the Social Robot Maggie.
 
 ## How To Map with Maggie
 
