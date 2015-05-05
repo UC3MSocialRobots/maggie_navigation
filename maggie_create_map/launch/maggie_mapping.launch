@@ -1,18 +1,7 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <launch>
     <arg name="robot" />
-
-    <group ns="$(arg robot)">
-        <!-- Run teleoperation -->
-        <include file="$(find maggie_teleop)/launch/teleop_joy.launch" />
-
-        <!-- Run slam -->
-        <node pkg="gmapping" name="gmapping" type="slam_gmapping" respawn="false" output="screen">
-            <param name="scan" value="scan_filtered" />
-            <param name="_odom_frame" value="odom" />
-        </node>
-    </group>
 
     <!-- Maggie Bringup -->
     <include file="$(find maggie_bringup)/launch/maggie_start_basic.launch" />
@@ -31,4 +20,15 @@
     <include file="$(find maggie_navigation_config)/launch/move_base.launch">
         <arg name="robot" value="$(arg robot)" />
     </include>
+
+    <!-- Run teleoperation -->
+    <include file="$(find maggie_teleop)/launch/teleop_joy.launch" />
+
+    <group ns="$(arg robot)">
+        <!-- Run slam -->
+        <node pkg="gmapping" name="gmapping" type="slam_gmapping" respawn="false" output="screen">
+            <param name="scan" value="scan_filtered" />
+            <param name="_odom_frame" value="odom" />
+        </node>
+    </group>
 </launch>

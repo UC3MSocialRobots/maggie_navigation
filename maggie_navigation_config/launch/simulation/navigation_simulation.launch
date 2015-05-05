@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <launch>
     <arg name="robot" />
 
@@ -20,7 +22,7 @@
     <include file="$(find maggie_navigation_config)/launch/simulation/navigation_stage.launch">
         <arg name="robot" value="$(arg robot)" />
     </include>
-    
+
     <group ns="$(arg robot)">
         <!-- RVIZ -->
         <node name="rviz" pkg="rviz" type="rviz" args="-d $(find uc3m_maps)/config/map_1.3.C12_simulated.rviz" />

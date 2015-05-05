@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <launch>
     <!--- Run AMCL -->
     <include file="$(find maiss_nav)/launch/amcl.launch" />
@@ -19,15 +21,15 @@
         <param name="controller_patience" type="double" value="10.0"/>
         <remap from="map" to="/map"/>
     </node>
-    
+
     <node pkg="maiss_nav" type="patrol_area_server" respawn="false" name="patrol_area" output="screen"/>
-    
+
     <rosparam file="$(find maiss_nav)/config/move_to_event_position_params.yaml" ns="move_to_event_position_params"/>
     <node pkg="maiss_nav" type="move_to_event_position_server" respawn="false" name="move_to_event_position" output="screen"/>
-    
+
     <rosparam file="$(find maiss_nav)/config/other_agent_obstacles_params.yaml" ns="other_agent_obstacles_params"/>
     <node pkg="maiss_nav" type="other_agent_obstacles_publisher" respawn="false" name="other_agent_obstacles_publisher" output="screen"/>
-    
+
     <!--node pkg="maiss_nav" name="move_base_supervisor" type="move_base_supervisor.py" respawn="true"/-->
 
     <node pkg="maiss_nav" name="maiss_stuck_robot_monitor" type="maiss_stuck_robot_monitor" respawn="true"/>

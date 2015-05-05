@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <launch>
     <arg name="robot" />
     <group ns="$(arg robot)">
@@ -9,10 +11,10 @@
         <param name="max_ang" type="double" value="2.08"/>
         <param name="min_ang" type="double" value="-2.08"/>
 
-	<remap from="scan" to="scan_back"/>
+    <remap from="scan" to="scan_back"/>
     </node>
 
-	<!-- publish the required transform /base_link -> /laser_back -->
-    <node name="back_laser_tf_broadcaster" pkg="tf" type="static_transform_publisher" args="-0.15 0 0.5   3.14159 0 0   base_link  	laser_back   100" />
-	</group>
+    <!-- publish the required transform /base_link -> /laser_back -->
+    <node name="back_laser_tf_broadcaster" pkg="tf" type="static_transform_publisher" args="-0.15 0 0.5   3.14159 0 0   base_link   laser_back   100" />
+    </group>
 </launch>
