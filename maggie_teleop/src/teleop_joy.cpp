@@ -1,6 +1,6 @@
 /**
  * @file        teleop_joy.cpp
- * @brief       Node for controlling a teleoperation joystick.
+ * @brief       Node for controlling a joystick for teleoperation.
  *
  * @author      Raul Perula-Martinez <raul.perula@uc3m.es>
  * @date        2015-04

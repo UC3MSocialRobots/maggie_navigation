@@ -1,6 +1,6 @@
 /**
  * @file        teleop_joy_main.h
- * @brief       Main for controlling a teleoperation joystick.
+ * @brief       Main for controlling a joystick for teleoperation.
  *
  * @author      Raul Perula-Martinez <raul.perula@uc3m.es>
  * @date        2015-04
