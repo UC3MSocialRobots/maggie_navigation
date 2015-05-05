@@ -1,7 +1,13 @@
-<launch>
-    <!-- the joy node -->
-    <node name="joy_node" pkg="joy" type="joy_node" required="true" output="screen" />
+<?xml version="1.0" encoding="UTF-8"?>
 
-    <!-- the teleoperation node -->
-    <node name="teleop_joy" pkg="maggie_teleop" type="teleop_joy_main.exe" output="screen" />
+<launch>
+    <arg name="robot" />
+
+    <group ns="$(arg robot)">
+        <!-- the joy node -->
+        <node name="joy_node" pkg="joy" type="joy_node" required="true" output="screen" />
+
+        <!-- the teleoperation node -->
+        <node name="teleop_joy" pkg="maggie_teleop" type="teleop_joy_main.exe" output="screen" />
+    </group>
 </launch>
