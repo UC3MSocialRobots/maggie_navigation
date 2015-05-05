@@ -1,14 +1,15 @@
 <?xml version="1.0"?>
-<package>
-    <name>maggie_navigation</name>
+<package format="2">
+    <name>maggie_create_map</name>
     <version>0.0.0</version>
     <description>
-        maggie_navigation metapackage
+        create map for Social Robot Maggie.
     </description>
 
     <!-- Author tags are optional, mutiple are allowed, one per tag -->
     <!-- Authors do not have to be maintianers, but could be -->
     <author email="raul.perula@uc3m.es">Raul Perula-Martinez</author>
+    <author email="jocastil@ing.uc3m.es">Jose Carlos Castillo Montoya</author>
 
 
     <!-- One maintainer tag required, multiple allowed, one person per tag -->
@@ -20,7 +21,7 @@
 
 
     <!-- Url tags are optional, but mutiple are allowed, one per tag -->
-    <url type="website">http://wiki.ros.org/maggie_navigation</url>
+    <url type="website">http://wiki.ros.org/maggie_create_map</url>
     <url type="bugtracker">https://github.com/UC3MSocialRobots/maggie_navigation/issues</url>
     <url type="repository">https://github.com/UC3MSocialRobots/maggie_navigation.git</url>
 
@@ -29,14 +30,11 @@
     <!-- Dependencies can be catkin packages or system dependencies -->
     <buildtool_depend>catkin</buildtool_depend>
 
-    <run_depend>maggie_create_map</run_depend>
-    <run_depend>maggie_navigation_config</run_depend>
-    <run_depend>maggie_teleop</run_depend>
-    <run_depend>uc3m_maps</run_depend>
-
-    <!-- The export tag contains other, unspecified, tags -->
-    <export>
-        <!-- You can specify that this package is a metapackage here: -->
-        <metapackage/>
-    </export>
+    <!-- ROS packages dependencies -->
+    <exec_depend>gmapping</exec_depend>
+    <exec_depend>map_server</exec_depend>
+    <exec_depend>maggie_teleop</exec_depend>
+    <exec_depend>maggie_base</exec_depend>
+    <exec_depend>maggie_bringup</exec_depend>
+    <exec_depend>maggie_navigation_config</exec_depend>
 </package>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<launch>
+    <arg name="robot" />
+    <arg name="map_name" />
+
+    <group ns="$(arg robot)">
+        <!-- Run map_saver -->
+        <node pkg="map_server" name="map_server" type="map_saver" output="screen" args="-f $(find uc3m_maps)/maps/$(arg map_name)" />
+    </group>
+</launch>
