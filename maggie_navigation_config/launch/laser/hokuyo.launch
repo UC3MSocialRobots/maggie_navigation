@@ -3,18 +3,19 @@
 <launch>
     <arg name="robot" />
     <group ns="$(arg robot)">
-    <node name="hokuyo" pkg="hokuyo_node" type="hokuyo_node" respawn="true" output="screen">
-        <param name="calibrate_time" type="bool" value="true"/>
-        <param name="port" type="string" value="/dev/ttyACM0"/>
-        <param name="intensity" type="bool" value="false"/>
-        <param name="frame_id" type="string" value="laser_back"/>
-        <param name="max_ang" type="double" value="2.08"/>
-        <param name="min_ang" type="double" value="-2.08"/>
+        <node name="hokuyo" pkg="hokuyo_node" type="hokuyo_node" respawn="true" output="screen">
+            <param name="calibrate_time" type="bool" value="true" />
+            <param name="port" type="string" value="/dev/ttyACM0" />
+            <param name="intensity" type="bool" value="false" />
+            <param name="frame_id" type="string" value="laser_back" />
+            <param name="max_ang" type="double" value="2.08" />
+            <param name="min_ang" type="double" value="-2.08" />
 
-    <remap from="scan" to="scan_back"/>
-    </node>
+            <remap from="scan" to="scan_back" />
+        </node>
 
-    <!-- publish the required transform /base_link -> /laser_back -->
-    <node name="back_laser_tf_broadcaster" pkg="tf" type="static_transform_publisher" args="-0.15 0 0.5   3.14159 0 0   base_link   laser_back   100" />
+        <!-- publish the required transform /base_link -> /laser_back -->
+        <node name="back_laser_tf_broadcaster" pkg="tf" type="static_transform_publisher"
+            args="-0.15 0 0.5   3.14159 0 0   base_link   laser_back   100" />
     </group>
 </launch>
