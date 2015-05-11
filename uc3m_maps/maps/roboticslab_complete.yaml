@@ -1,4 +1,4 @@
-image: /home/raul/workspace/ros/hydro/src/social_robots/maggie_navigation/uc3m_maps/maps/roboticslab_complete.pgm
+image: ../maps/roboticslab_complete.pgm
 resolution: 0.050000
 origin: [-100.000000, -100.000000, 0.000000]
 negate: 0
