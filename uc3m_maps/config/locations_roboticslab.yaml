@@ -1,0 +1,395 @@
+location_name: maria_malfaz
+id: 1.3.C11
+position:
+  x: 11.8192581701
+  y: 26.0855659365
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: -0.994316185633
+  w: 0.106467473854
+---
+location_name: santi
+id: 1.3.C10
+position:
+  x: 11.9837120335
+  y: 28.579207872
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.999992766868
+  w: 0.00380344729524
+---
+location_name: labo_maggie
+id: 1.3.C12
+position:
+  x: 11.9978854184
+  y: 30.4461059621
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: -0.242914231938
+  w: 0.970047769917
+---
+location_name: alberto_jardon
+id: 1.3.C09
+position:
+  x: 11.9808423877
+  y: 30.9827783045
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: -0.999385268821
+  w: 0.035058300924
+---
+location_name: fernando_monar
+id: 1.3.C08
+position:
+  x: 11.6897686895
+  y: 33.3677977485
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: -0.999762497648
+  w: 0.0217933085511
+---
+location_name: gorostiza
+id: 1.3.C07
+position:
+  x: 11.6216579799
+  y: 35.6612693616
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: -0.999896265882
+  w: 0.0144033841817
+---
+location_name: ramon_barber
+id: 1.3.C06
+position:
+  x: 11.7955964527
+  y: 38.0784259195
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: -0.999983316946
+  w: 0.00577631626352
+---
+location_name: concha
+id: 1.3.C05
+position:
+  x: 11.9030323377
+  y: 40.4634551135
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.999779379458
+  w: 0.0210045807008
+---
+location_name: dolores
+id: 1.3.C04
+position:
+  x: 11.925068094
+  y: 42.8181709283
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.999288064736
+  w: 0.037727492308
+---
+location_name: santiago_garrido
+id: 1.3.C03
+position:
+  x: 11.9521802777
+  y: 45.3311520486
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.999042812364
+  w: 0.0437431030487
+---
+location_name: luis_moreno
+id: 1.3.C02
+position:
+  x: 11.9000755397
+  y: 47.8449936774
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.999925005181
+  w: 0.0122467960213
+---
+location_name: angela_fernando
+id: 1.3.C14
+position:
+  x: 13.7850047534
+  y: 57.6991337806
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: -0.0610569761743
+  w: 0.998134282379
+---
+location_name: alvaro_villoslada
+id: 1.3.C13
+position:
+  x: 12.2106569537
+  y: 44.6778795866
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: -0.0729445953859
+  w: 0.997335994539
+---
+location_name: stairwell_bc
+id: 1.3.BC_stairwell
+position:
+  x: 11.747996069
+  y: 57.8014259879
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: -0.999280848758
+  w: 0.0379181395372
+---
+location_name: visitors_office
+id: 1.3.B12
+position:
+  x: 10.2921833088
+  y: 64.6156128579
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.999901953726
+  w: 0.0140029616809
+---
+location_name: armingol
+id: 1.3.B11
+position:
+  x: 11.4488806873
+  y: 69.2269365393
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.999722884996
+  w: 0.0235404591051
+---
+location_name: mariano
+id: 1.3.B10
+position:
+  x: 11.469970611
+  y: 71.7694457101
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.999494371136
+  w: 0.0317962587118
+---
+location_name: mariano
+id: 1.3.B10
+position:
+  x: 11.469970611
+  y: 71.7694457101
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.999494371136
+  w: 0.0317962587118
+---
+location_name: arturo_delaescalera
+id: 1.3.B09
+position:
+  x: 11.3101302372
+  y: 74.4237415935
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.999508253515
+  w: 0.0313568358781
+---
+location_name: edu_sonia
+id: 1.3.B06
+position:
+  x: 11.0542937882
+  y: 81.6279021169
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: -0.999081678365
+  w: 0.042846236181
+---
+location_name: fernando_garcia
+id: 1.3.B04
+position:
+  x: 11.3018232233
+  y: 91.0651115525
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.998258818049
+  w: 0.0589858642952
+---
+location_name: francisco_rodriguezurbano
+id: 1.3.B03
+position:
+  x: 11.4619344235
+  y: 93.5572365958
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: -0.998795124908
+  w: 0.0490744175631
+---
+location_name: mohamed
+id: 1.3.B02
+position:
+  x: 11.3014638757
+  y: 96.3067802206
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.998824932532
+  w: 0.0484639469341
+---
+location_name: alvaro_castro
+id: 1.3.B01
+position:
+  x: 11.4581019297
+  y: 97.4545450012
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.997639285079
+  w: 0.0686720967164
+---
+location_name: lsi_lab
+id: 1.3.B16
+position:
+  x: 11.9925046669
+  y: 94.7019804884
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: -0.0855606630238
+  w: 0.996332962891
+---
+location_name: 1.3.corkboard_b16_b15
+id: 1.3.B15-B16_corkboard
+position:
+  x: 12.1270568927
+  y: 89.8390053113
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.238513368688
+  w: 0.971139213994
+---
+location_name: jose_carlos
+id: 1.3.B15
+position:
+  x: 11.7566192709
+  y: 87.5492542508
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.0785483461374
+  w: 0.996910305554
+---
+location_name: raul
+id: 1.3.B14
+position:
+  x: 11.5000421297
+  y: 80.2253699093
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: -0.0852075070191
+  w: 0.996363227316
+---
+location_name: victor
+id: 1.3.B13
+position:
+  x: 12.0782380741
+  y: 68.2497902191
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.0642921393036
+  w: 0.99793112028
+---
+location_name: map_bc
+id: 1.3.BC_map
+position:
+  x: 13.1587240578
+  y: 60.6391111357
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.0549030724001
+  w: 0.998491688819
+---
+location_name: stairwell_ab
+id: 1.3.AB_stairwell
+position:
+  x: 11.5801687092
+  y: 105.591739417
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.995807419763
+  w: 0.0914744923153
+---
+location_name: entrance_a
+id: 1.3.A_entrance_a
+position:
+  x: 12.0745872518
+  y: 109.066232343
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.688652814423
+  w: 0.725091236457
+---
+location_name: map_ab
+id: 1.3.AB_map
+position:
+  x: 13.5046527128
+  y: 107.582584934
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.0195422805223
+  w: 0.999809031401
