@@ -7,7 +7,6 @@ GitHub repository for the navigation for the Social Robot Maggie.
 - `maggie_navigation`: a ROS metapackage.
 - `maggie_navigation_config`: a ROS package with the launch and config files necessary to start the navigation, both real and simulated.
 - `maggie_teleop`: a ROS package with the launch and config files necessary to start the teleoperation.
-- `uc3m_maps`: a ROS package with the maps files necessary to start a navigation.
 
 ## LICENSE
 
