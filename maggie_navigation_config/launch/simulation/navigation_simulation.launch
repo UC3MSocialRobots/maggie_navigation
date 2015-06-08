@@ -14,7 +14,7 @@
     <param name="use_sim_time" type="bool" value="true" />
 
     <!-- Run the map server -->
-    <node name="map_server" pkg="map_server" type="map_server" args="$(find uc3m_maps)/config/map_1.3.C12_2014-12.yaml">
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find uc3m_maps)/maps/map_1.3.C12_2014-12.yaml">
         <param name="frame_id" value="/map" />
     </node>
 
