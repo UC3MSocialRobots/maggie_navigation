@@ -70,8 +70,8 @@ class InitialposeSender():
 
                 msg.pose.pose.orientation.x = 0
                 msg.pose.pose.orientation.y = 0
-                msg.pose.pose.orientation.z = math.sin(place_data['th'] / 2.0)
-                msg.pose.pose.orientation.w = math.cos(place_data['th'] / 2.0)
+                msg.pose.pose.orientation.z = math.sin(place_data['th'])
+                msg.pose.pose.orientation.w = math.cos(place_data['th'])
 
                 # publish the initial position
                 self.__initialpose_pub.publish(msg)
