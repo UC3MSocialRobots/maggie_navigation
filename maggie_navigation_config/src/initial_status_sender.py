@@ -23,10 +23,10 @@ pkg_name = "maggie_navigation_config"
 roslib.load_manifest(pkg_name)
 
 
-class InitialStatusSender():
+class InitialposeSender():
 
     """
-    GoToPlace skill class.
+    InitialposeSender class.
     """
 
     def __init__(self):
@@ -35,13 +35,14 @@ class InitialStatusSender():
         """
 
         # publishers and subscribers
-        self.__initial_status_pub = rospy.Publisher('initialpose',
-                                                    PoseWithCovarianceStamped, queue_size=1)
+        self.__initialpose_pub = rospy.Publisher('initialpose',
+                                                 PoseWithCovarianceStamped, queue_size=1, latch=True)
 
     def run(self):
         """
         Spinner of the node.
 
+        @raise KeyError: exception when dictionary has an invalid key.
         @raise rosparam.RosParamException: exception when cannot open the config file.
         """
 
@@ -73,7 +74,7 @@ class InitialStatusSender():
                 msg.pose.pose.orientation.w = math.cos(place_data['th'] / 2.0)
 
                 # publish the initial position
-                self.__initial_status_pub.publish(msg)
+                self.__initialpose_pub.publish(msg)
             except KeyError:
                 rospy.logerr('[INITIAL_STATUS_SENDER] Error.')
         except rosparam.RosParamException:
@@ -86,7 +87,9 @@ if __name__ == '__main__':
         rospy.init_node(pkg_name)
 
         # create and spin the node
-        node = InitialStatusSender()
+        node = InitialposeSender()
         node.run()
+
+        rospy.spin()
     except rospy.ROSInterruptException:
         pass
