@@ -40,6 +40,9 @@
     <depend>gmapping</depend>
     <exec_depend>sicktoolbox_wrapper</exec_depend>
     <exec_depend>hokuyo_node</exec_depend>
+    
+    <!-- Social Robots packages dependencies -->
+    <exec_depend>uc3m_maps</exec_depend>
 
 
     <!-- The export tag contains other, unspecified, tags -->
