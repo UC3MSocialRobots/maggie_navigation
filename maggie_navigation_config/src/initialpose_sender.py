@@ -49,7 +49,7 @@ class InitialposeSender():
 
         try:
             # read the data from the yaml file
-            data = rosparam.load_file(roslib.packages.get_pkg_dir(pkg_name) + "/config/initial_pose.yaml",
+            data = rosparam.load_file(roslib.packages.get_pkg_dir(pkg_name) + "/config/initialpose.yaml",
                                       rospy.get_name())
             try:
                 # the place label come from the request
@@ -69,21 +69,9 @@ class InitialposeSender():
                 msg.pose.covariance[7] = place_data['cov_y']
                 msg.pose.covariance[35] = place_data['cov_th']
 
-                # roll, pitch, yaw
+                # convert from (roll, pitch, yaw) to quaternion
                 quat = quaternion_from_euler(0.0, 0.0, place_data['th'])
                 msg.pose.pose.orientation = Quaternion(*quat.tolist())
-                print msg.pose.pose.orientation.z
-                print msg.pose.pose.orientation.w
-
-#                 msg.pose.pose.orientation.x = 0
-#                 msg.pose.pose.orientation.y = 0
-#                 print place_data['th']
-#                 msg.pose.pose.orientation.z = math.sin(
-#                     (place_data['th'] - math.pi / 2.0) / 2.0)
-#                 print msg.pose.pose.orientation.z
-#                 msg.pose.pose.orientation.w = math.cos(
-#                     (place_data['th'] - math.pi / 2.0) / 2.0)
-#                 print msg.pose.pose.orientation.w
 
                 # publish the initial position
                 self.__initialpose_pub.publish(msg)

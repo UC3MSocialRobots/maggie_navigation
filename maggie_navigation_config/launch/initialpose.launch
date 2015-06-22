@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+    <arg name="robot" />
+
+    <group ns="$(arg robot)">
+        <node pkg="maggie_navigation_config" name="initialpose_sender" type="initialpose_sender.py"
+            output="screen" />
+    </group>
+</launch>
