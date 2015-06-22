@@ -12,7 +12,8 @@ __status__ = "Development"
 
 import math
 
-from geometry_msgs.msg import PoseWithCovarianceStamped
+from geometry_msgs.msg import PoseWithCovarianceStamped, Quaternion
+from tf.transformations import quaternion_from_euler
 
 import roslib
 import rosparam
@@ -68,15 +69,21 @@ class InitialposeSender():
                 msg.pose.covariance[7] = place_data['cov_y']
                 msg.pose.covariance[35] = place_data['cov_th']
 
-                msg.pose.pose.orientation.x = 0
-                msg.pose.pose.orientation.y = 0
-                print place_data['th']
-                msg.pose.pose.orientation.z = math.sin(
-                    (math.radians(place_data['th']) - math.pi / 2.0) / 2.0)
+                # roll, pitch, yaw
+                quat = quaternion_from_euler(0.0, 0.0, place_data['th'])
+                msg.pose.pose.orientation = Quaternion(*quat.tolist())
                 print msg.pose.pose.orientation.z
-                msg.pose.pose.orientation.w = math.cos(
-                    (math.radians(place_data['th']) - math.pi / 2.0) / 2.0)
                 print msg.pose.pose.orientation.w
+
+#                 msg.pose.pose.orientation.x = 0
+#                 msg.pose.pose.orientation.y = 0
+#                 print place_data['th']
+#                 msg.pose.pose.orientation.z = math.sin(
+#                     (place_data['th'] - math.pi / 2.0) / 2.0)
+#                 print msg.pose.pose.orientation.z
+#                 msg.pose.pose.orientation.w = math.cos(
+#                     (place_data['th'] - math.pi / 2.0) / 2.0)
+#                 print msg.pose.pose.orientation.w
 
                 # publish the initial position
                 self.__initialpose_pub.publish(msg)
