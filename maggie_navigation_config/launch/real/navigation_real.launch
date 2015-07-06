@@ -3,22 +3,12 @@
 <launch>
     <arg name="robot" />
 
-    <!-- Odometry information and movement (base controller) -->
+    <!-- ODOMETRY + MOVEMENT (BASE CONTROLLER) -->
     <include file="$(find maggie_base)/launch/base.launch">
         <arg name="robot" value="$(arg robot)" />
     </include>
 
-    <!-- Sick -->
-    <include file="$(find maggie_navigation_config)/launch/laser/sick.launch">
-        <arg name="robot" value="$(arg robot)" />
-    </include>
-
-    <!-- Hokuyo -->
-    <include file="$(find maggie_navigation_config)/launch/laser/hokuyo.launch">
-        <arg name="robot" value="$(arg robot)" />
-    </include>
-
-    <!-- Navigation -->
+    <!-- NAVIGATION -->
     <include file="$(find maggie_navigation_config)/launch/real/navigation.launch">
         <arg name="robot" value="$(arg robot)" />
     </include>
