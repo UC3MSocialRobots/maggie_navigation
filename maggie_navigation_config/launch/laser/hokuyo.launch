@@ -2,6 +2,7 @@
 
 <launch>
     <arg name="robot" />
+
     <group ns="$(arg robot)">
         <node name="hokuyo" pkg="hokuyo_node" type="hokuyo_node" respawn="true" output="screen">
             <param name="calibrate_time" type="bool" value="true" />

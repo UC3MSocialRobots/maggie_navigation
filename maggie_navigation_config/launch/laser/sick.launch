@@ -2,6 +2,7 @@
 
 <launch>
     <arg name="robot" />
+
     <group ns="$(arg robot)">
         <node name="sicklms_node" pkg="sicktoolbox_wrapper" type="sicklms" output="screen">
             <param name="port" type="string" value="/dev/laser" />
