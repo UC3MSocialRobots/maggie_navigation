@@ -81,31 +81,31 @@ void TeleopJoy::joy_callback(const sensor_msgs::Joy::ConstPtr& joy)
     // Button 3 + joystick = tilt head
 
     if (joy->buttons[0]) {
-        ROS_INFO_THROTTLE(1, "Button 0 pushed. Moving right arm. \n Emitting linear: %g, angular: %g", vel.linear.x,
+        ROS_DEBUG_THROTTLE(1, "Button 0 pushed. Moving right arm. \n Emitting linear: %g, angular: %g", vel.linear.x,
                           vel.angular.z);
 
         _right_arm_vel_pub.publish(vel);
     }
     else if (joy->buttons[1]) {
-        ROS_INFO_THROTTLE(1, "Button 1 pushed. Moving left arm. \n Emitting linear: %g, angular: %g", vel.linear.x,
+        ROS_DEBUG_THROTTLE(1, "Button 1 pushed. Moving left arm. \n Emitting linear: %g, angular: %g", vel.linear.x,
                           vel.angular.z);
 
         _left_arm_vel_pub.publish(vel);
     }
     else if (joy->buttons[2]) {
-        ROS_INFO_THROTTLE(1, "Button 2 pushed. Panning head. \n Emitting linear: %g, angular: %g", vel.linear.x,
+        ROS_DEBUG_THROTTLE(1, "Button 2 pushed. Panning head. \n Emitting linear: %g, angular: %g", vel.linear.x,
                           vel.angular.z);
 
         _neck_pan_vel_pub.publish(vel);
     }
     else if (joy->buttons[3]) {
-        ROS_INFO_THROTTLE(1, "Button 3 pushed. Tilting head. \n Emitting linear: %g, angular: %g", vel.linear.x,
+        ROS_DEBUG_THROTTLE(1, "Button 3 pushed. Tilting head. \n Emitting linear: %g, angular: %g", vel.linear.x,
                           vel.angular.z);
 
         _neck_tilt_vel_pub.publish(vel);
     }
     else {
-        ROS_INFO_THROTTLE(1, "Emitting linear: %g, angular: %g", vel.linear.x, vel.angular.z);
+        ROS_DEBUG_THROTTLE(1, "Emitting linear: %g, angular: %g", vel.linear.x, vel.angular.z);
 
         _vel_pub.publish(vel);
     }

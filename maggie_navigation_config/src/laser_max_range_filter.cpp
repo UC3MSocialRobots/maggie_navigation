@@ -97,16 +97,20 @@ class LaserMaxRangeFilter {
 
 int main(int argc, char** argv)
 {
-    ROS_DEBUG("main()");
     ros::init(argc, argv, "laser_max_range_filter");
+
     ros::NodeHandle nh("~");
+
     std::string laser_src_topic, laser_dst_topic;
+
     nh.param("laser_src_topic", laser_src_topic, std::string("base_scan"));
     nh.param("laser_dst_topic", laser_dst_topic, std::string("base_scan_filtered"));
-    ROS_INFO("laser_max_range_filter:This executable subscribes to a laser scan '%s', "
-             "and sets all the laser measurements out of range to the max value. "
-             "It then republishes it to '%s'.",
-             laser_src_topic.c_str(), laser_dst_topic.c_str());
+
+    ROS_DEBUG("laser_max_range_filter:This executable subscribes to a laser scan '%s', "
+              "and sets all the laser measurements out of range to the max value. "
+              "It then republishes it to '%s'.",
+              laser_src_topic.c_str(), laser_dst_topic.c_str());
+
     LaserMaxRangeFilter filter(laser_src_topic, laser_dst_topic);
 
     /**
@@ -115,5 +119,6 @@ int main(int argc, char** argv)
      * will exit when Ctrl-C is pressed, or the node is shutdown by the master.
      */
     ros::spin();
+
     return 0;
 }
