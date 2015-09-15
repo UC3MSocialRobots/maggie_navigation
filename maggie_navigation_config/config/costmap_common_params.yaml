@@ -44,7 +44,7 @@ observation_sources: laser_scan_sensor
 # costmap, clear obstacle information from the costmap, or do both.
 laser_scan_sensor: {
     data_type: LaserScan,
-    topic: scan_filtered,
+    topic: scan_total,
     #sensor_frame: /base_link,
     clearing: true,
     marking: true,
