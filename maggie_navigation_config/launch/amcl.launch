@@ -6,7 +6,7 @@
     <arg name="global_map_server" default="true" />
 
     <group ns="$(arg robot)">
-        <node name="amcl" pkg="amcl" type="amcl" args="scan:=scan_total">
+        <node name="amcl" pkg="amcl" type="amcl" args="scan:=scan_filtered">
             <!-- Overall filter parameters -->
 
             <!-- Minimum allowed number of particles (default: 100) -->
