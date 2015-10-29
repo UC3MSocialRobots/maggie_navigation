@@ -10,9 +10,9 @@
             <param name="resolution" type="double" value="0.5" />
         </node>
 
-        <!-- publish the required transform /base_link -> /laser -->
+        <!-- publish the required transform /sick_link -> /laser -->
         <node name="laser_tf_broadcaster" pkg="tf" type="static_transform_publisher"
-            args="0.10 0 0.25   0 0 0   base_link  laser   100" />
+            args="0 0 0   0 0 0   sick_link  laser   100" />
 
         <!-- *** homebrew filter: replace out_of_range measurements with max_range -->
         <node name="laser_max_range_filter" pkg="maggie_navigation_config" type="laser_max_range_filter.exe"
