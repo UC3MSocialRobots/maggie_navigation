@@ -18,8 +18,8 @@ raytrace_range: 2.5
 # the center of the robot is assumed to be at (0.0, 0.0) and both
 # clockwise and counterclockwise specifications are supported.
 #footprint: [[x0, y0], [x1, y1], ... [xn, yn]]
-footprint: [[-0.35, -0.25], [0.35, -0.25], [0.35, 0.25], [-0.35, 0.25]]
-#robot_radius: 0.1
+#footprint: [[-0.35, -0.25], [0.35, -0.25], [0.35, 0.25], [-0.35, 0.25]]
+robot_radius: 0.2
 
 # We'll also set the inflation radius for the costmap. The inflation
 # radius should be set to the maximum distance from obstacles at which
