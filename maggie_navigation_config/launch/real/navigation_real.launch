@@ -9,7 +9,14 @@
     </include>
 
     <!-- NAVIGATION -->
-    <include file="$(find maggie_navigation_config)/launch/real/navigation.launch">
+    
+    <!--- Run AMCL -->
+    <include file="$(find maggie_navigation_config)/launch/amcl.launch">
+        <arg name="robot" value="$(arg robot)" />
+    </include>
+
+    <!--- Movement Planner -->
+    <include file="$(find maggie_navigation_config)/launch/move_base.launch">
         <arg name="robot" value="$(arg robot)" />
     </include>
 </launch>
