@@ -49,7 +49,7 @@ class InitialposeSender():
 
         try:
             # read the data from the yaml file
-            data = rosparam.load_file(roslib.packages.get_pkg_dir(pkg_name) + "/config/initialpose.yaml",
+            data = rosparam.load_file(roslib.packages.get_pkg_dir(pkg_name) + "/config/map_1.3.C12_initialpose.yaml",
                                       rospy.get_name())
             try:
                 # the place label come from the request
