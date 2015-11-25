@@ -7,12 +7,9 @@
         <node name="sicklms_node" pkg="sicktoolbox_wrapper" type="sicklms" output="screen">
             <param name="port" type="string" value="/dev/laser" />
             <param name="baud" type="int" value="38400" />
+            <param name="frame_id" type="string" value="sick_link" />
             <param name="resolution" type="double" value="0.5" />
         </node>
-
-        <!-- publish the required transform /sick_link -> /laser -->
-        <node name="laser_tf_broadcaster" pkg="tf" type="static_transform_publisher"
-            args="0 0 0   0 0 0   sick_link  laser   100" />
 
         <!-- *** homebrew filter: replace out_of_range measurements with max_range -->
         <node name="laser_max_range_filter" pkg="maggie_navigation_config" type="laser_max_range_filter.exe"
