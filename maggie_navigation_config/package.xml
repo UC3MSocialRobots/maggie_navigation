@@ -38,6 +38,7 @@
     <depend>amcl</depend>
     <depend>stage</depend>
     <depend>gmapping</depend>
+    <depend>map-server</depend>
     <exec_depend>sicktoolbox_wrapper</exec_depend>
     <exec_depend>hokuyo_node</exec_depend>
     
