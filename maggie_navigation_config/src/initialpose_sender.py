@@ -37,7 +37,9 @@ class InitialposeSender():
 
         # publishers and subscribers
         self.__initialpose_pub = rospy.Publisher('initialpose',
-                                                 PoseWithCovarianceStamped, queue_size=1, latch=True)
+                                                 PoseWithCovarianceStamped,
+                                                 queue_size=1,
+                                                 latch=True)
 
     def run(self):
         """
