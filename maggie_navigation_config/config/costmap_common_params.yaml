@@ -1,5 +1,6 @@
 # These parameters set thresholds on obstacle information put into the
 # costmap.
+
 # The "obstacle_range" parameter determines the maximum range
 # sensor reading that will result in an obstacle being put into the
 # costmap. Here, we have it set at 2.5 meters, which means that the
