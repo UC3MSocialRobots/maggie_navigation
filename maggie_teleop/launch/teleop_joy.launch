@@ -5,7 +5,9 @@
 
     <group ns="$(arg robot)">
         <!-- the joy node -->
-        <node name="joy_node" pkg="joy" type="joy_node" required="true" output="screen" />
+        <node name="joy_node" pkg="joy" type="joy_node" required="true" output="screen">
+            <param name="dev" type="string" value="/dev/input/js1" />
+        </node>
 
         <!-- the teleoperation node -->
         <node name="teleop_joy" pkg="maggie_teleop" type="teleop_joy_main.exe" output="screen" />
