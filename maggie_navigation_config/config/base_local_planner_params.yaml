@@ -79,10 +79,10 @@ TrajectoryPlannerROS:
     meter_scoring: true
 
     # The weighting for how much the controller should stay close to the path it was given
-    path_distance_bias: 0.6
+    pdist_scale: 1.1
 
     # The weighting for how much the controller should attempt to reach its local goal, also controls speed
-    goal_distance_bias: 0.7
+    gdist_scale: 0.8
 
     # The weighting for how much the controller should attempt to avoid obstacles
     occdist_scale: 0.01
@@ -96,7 +96,7 @@ TrajectoryPlannerROS:
     #heading_scoring: false
 
     # We'll use the Dynamic Window Approach to control instead of Trajectory Rollout for this example
-    dwa: true
+    dwa: false
 
 ### Global Plan Parameters
 
